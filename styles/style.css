@@ -1,0 +1,85 @@
+body {   
+    margin: 0;   
+    height: 100vh;  
+    display: flex; 
+    flex-direction: column;  
+}   
+
+.top-bar {   
+    border: 2px solid #000;    
+    display: flex;    
+    justify-content: space-between;    
+    align-items: center;    
+    height: 80px;  
+    overflow: hidden;  
+}   
+
+.top-bar-left, .top-bar-right {   
+    display: flex;   
+    align-items: center;   
+}   
+
+.borders-r {   
+    border-right: 2px solid #000;   
+    padding: 2px;  
+    max-width: 80px;  
+}   
+
+.borders-l {   
+    border-left: 2px solid #000;   
+    padding: 5px;   
+    max-width: 80px; 
+}   
+
+.top-pick {   
+    max-width: 80px;   
+    max-height: auto;   
+}  
+
+.main {  
+    flex: 1;  
+    display: flex;  
+    flex-direction: column; /* Вертикальное расположение контейнеров */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+}  
+
+.container{  
+    display: flex; 
+    width: 300px;  
+    border-top: 2px solid #000;    
+    border-left: 2px solid #000;  
+    border-right: 2px solid #000;    
+}  
+
+.container-last {  
+    display: flex; 
+    width: 300px;  
+    border: 2px solid #000;     
+}  
+
+.section { 
+    display: flex; 
+    width: 100%; /* Занимает всю ширину контейнера */ 
+} 
+
+.pics-part { 
+    width: 50%; /* Ширина для фото */
+}
+
+.photo { 
+    width: 100%; /* Полная ширина для изображения */
+    height: auto; /* Автоматическая высота */ 
+} 
+
+.text-part { 
+    width: 50%; /* Ширина для текста */
+    padding: 10px; /* Отступы вокруг текста */ 
+    display: flex; /* Используем flex для центрирования текста */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.section u { 
+    display: block;
+}
