@@ -1,0 +1,135 @@
+body {    
+    margin: 0;    
+    height: 100vh;   
+    display: flex;  
+    flex-direction: column;   
+    text-decoration: none;
+}    
+
+
+.top-bar {    
+    border: 2px solid #000;     
+    display: flex;     
+    justify-content: space-between;     
+    align-items: center;     
+    height: 80px;   
+    overflow: hidden;  
+    background-color: #000;
+}    
+
+.top-bar-left, .top-bar-right {    
+    display: flex;    
+    align-items: center;    
+}    
+
+.borders-r, .borders-l {    
+    padding: 2px;   
+    max-width: 80px;   
+}    
+
+
+.top-pick {    
+    max-width: 65px;    
+    max-height: auto;    
+    border: 2px solid #000; /* Рамка для каждой картинки */
+    border-radius: 8px; /* Слегка округленная рамка */
+    padding: 5px; /* Отступ внутри рамки */
+    background-color: #e5e5e5; /* Цвет фона внутри рамки (можно изменить) */
+} 
+
+.main {  
+    flex: 1;  
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center; 
+    text-decoration: none;
+    align-items: center; 
+    background-image: linear-gradient(-30deg, #2E9AFF,#F498AD, #8e06d2);
+    
+    /* background-image: url("7g.gif");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    height: 100%; */
+}  
+
+.container{  
+    display: flex; 
+    width: 300px;  
+    border: 2px solid #000; 
+    border-radius: 8px;
+    margin-bottom: 5px; 
+    background-color: #ededed;
+    /* background-image: linear-gradient(30deg, #2E9AFF,#F498AD, #8e06d2); */
+}  
+
+.frame {
+    padding: 5px;
+    /* border: 2px solid black; */
+}
+
+.section { 
+    display: flex; 
+    width: 100%; /* Занимает всю ширину контейнера */ 
+    text-decoration: none;
+} 
+
+.pics-part { 
+    width: 50%; /* Ширина для фото */
+    background-color: #e5e5e5;
+}
+
+.photo { 
+    width: 100%; /* Полная ширина для изображения */
+    height: auto; /* Автоматическая высота */ 
+} 
+
+.text-part { 
+    width: 50%; /* Ширина для текста */
+    padding: 10px; /* Отступы вокруг текста */ 
+    display: flex; /* Используем flex для центрирования текста */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    text-decoration: none;
+}
+
+.section u { 
+    display: block;
+}
+
+.text {
+    text-decoration: none;
+}
+
+
+.no-link {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Убирает синий цвет, наследует цвет родительского элемента */
+}
+
+.no-link:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+    color: inherit; /* Убирает изменение цвета при наведении */
+}
+
+
+.footer {
+    display: flex; /* Используем flexbox для горизонтального расположения ссылок */
+    justify-content: center; /* Центрируем содержимое */ /* Отступ сверху для нижней плашки */
+    padding: 10px; /* Внутренние отступы для нижней плашки */
+}
+
+.footer-link {
+    color: #007bff; /* Цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.separator {
+    align-self: center; /* Центрируем разделитель по вертикали */
+}
