@@ -9,7 +9,7 @@
     <style>
         .error-message { color: red; display: none; }
         .error {
-    border: 2px solid red; /* Подсветка красным */
+    border: 2px solid red; 
 }
     </style>
 </head>
@@ -95,23 +95,23 @@
         const email = document.getElementById('register-email').value.trim();
         const password = document.getElementById('register-password').value;
         const confirmPassword = document.getElementById('register-confirm-password').value;
-        const agreementCheckbox = document.getElementById('agreement-checkbox'); // Получаем чекбокс
+        const agreementCheckbox = document.getElementById('agreement-checkbox'); 
         let hasError = false;
 
-        // Проверка логина
+        
         if (username === '') {
             document.getElementById('register-username-error').textContent = "Введите логин.";
             document.getElementById('register-username-error').style.display = 'block';
             hasError = true;
         }
 
-        // Проверка email
+        
         if (email === '') {
             document.getElementById('register-email-error').textContent = "Введите почту.";
             document.getElementById('register-email-error').style.display = 'block';
             hasError = true;
         } else {
-            const emailPattern = /^[^s@]+@[^s@]+.[^s@]+$/; // Исправленный паттерн для проверки email
+            const emailPattern = /^[^s@]+@[^s@]+.[^s@]+$/; 
             if (!emailPattern.test(email)) {
                 document.getElementById('register-email-error').textContent = "Некорректный адрес электронной почты.";
                 document.getElementById('register-email-error').style.display = 'block';
@@ -119,14 +119,14 @@
             }
         }
 
-        // Проверка пароля
+        
         if (password === '') {
             document.getElementById('register-password-error').textContent = "Введите пароль.";
             document.getElementById('register-password-error').style.display = 'block';
             hasError = true;
         }
 
-        // Проверка подтверждения пароля
+        
         if (confirmPassword === '') {
             document.getElementById('register-confirm-password-error').textContent = "Повторите пароль.";
             document.getElementById('register-confirm-password-error').style.display = 'block';
@@ -137,18 +137,18 @@
             hasError = true;
         }
 
-        // Проверка согласия с пользовательским соглашением
+        
         if (!agreementCheckbox.checked) {
             document.getElementById('agreement-error').textContent = "Вы должны принять пользовательское соглашение.";
             document.getElementById('agreement-error').style.display = 'block';
             hasError = true;
         } else {
-            document.getElementById('agreement-error').textContent = ""; // Очищаем сообщение об ошибке
+            document.getElementById('agreement-error').textContent = ""; 
         }
 
-        // Если нет ошибок, переходим на другую страницу
+        
         if (!hasError) {
-            setTimeout(() => { window.location.href = 'index2.html'; }, 500); // Переход через 500 мс
+            setTimeout(() => { window.location.href = 'index2.html'; }, 500); 
         }
     });
 

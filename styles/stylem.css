@@ -6,93 +6,93 @@ body {
 .header {
     background: linear-gradient(135deg, rgba(0, 0, 255, 0.7), rgba(128, 0, 128, 0.7));
     backdrop-filter: blur(10px);
-    height: 150px; /* Высота плашки */
+    height: 150px; 
     display: flex;
-    align-items: center; /* Вертикальное выравнивание */
-    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; 
+    justify-content: center; 
 }
 
 h1 {
-    font-size: 48px; /* Размер шрифта */
-    color: white; /* Цвет текста */
+    font-size: 48px; 
+    color: white; 
     text-align: center;
-    margin: 0; /* Убирает отступы по умолчанию */
+    margin: 0; 
 }
 
 
 .content {
-    padding: 20px; /* Отступы вокруг контента */
+    padding: 20px; 
 }
 
 .block {
-    display: flex; /* Используем flexbox для расположения картинки и текста */
-    align-items: center; /* Вертикальное выравнивание элементов */
-    margin-bottom: 20px; /* Отступ между блоками */
-    background-color: #f0f0f0; /* Цвет фона блока */
-    border-radius: 8px; /* Скругление углов */
-    padding: 20px; /* Внутренние отступы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для блока */
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    background-color: #f0f0f0; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .image-left {
-    margin-right: 20px; /* Отступ справа от картинки */
+    margin-right: 20px; 
 }
 
 .image-right {
-    margin-left: 20px; /* Отступ слева от картинки */
+    margin-left: 20px; 
 }
 
 .text {
-    flex: 1; /* Занимает оставшееся пространство */
+    flex: 1; 
 }
 
 .text h2 {
-    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    margin-top: 0; 
 }
 
 .registration {
-    display: flex; /* Центрируем кнопку по горизонтали */
-    justify-content: center; /* Горизонтальное выравнивание */
-    margin-top: 30px; /* Отступ сверху для кнопки */
+    display: flex; 
+    justify-content: center; 
+    margin-top: 30px; 
 }
 
 .register-button {
-    background-color: #007bff; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Убираем рамку */
-    border-radius: 25px; /* Скругление углов кнопки */
-    padding: 10px 20px; /* Внутренние отступы (вертикальные и горизонтальные) */
-    font-size: 35px; /* Размер шрифта кнопки */
-    cursor: pointer; /* Изменение курсора при наведении */
-    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    font-size: 35px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .register-button:hover {
-    background-color: #0056b3; /* Цвет фона при наведении */
+    background-color: #0056b3; 
 }
 
 .footer {
-    display: flex; /* Используем flexbox для горизонтального расположения ссылок */
-    justify-content: center; /* Центрируем содержимое */
-    margin-top: 40px; /* Отступ сверху для нижней плашки */
-    padding: 20px; /* Внутренние отступы для нижней плашки */
+    display: flex; 
+    justify-content: center; 
+    margin-top: 40px; 
+    padding: 20px; 
 }
 
 .footer-link {
-    color: #007bff; /* Цвет текста ссылки */
-    text-decoration: none; /* Убираем подчеркивание у ссылки */
-    margin: 0 10px; /* Отступы между ссылками */
+    color: #007bff; 
+    text-decoration: none; 
+    margin: 0 10px; 
 }
 
 .footer-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline; 
 }
 
 .separator {
-    align-self: center; /* Центрируем разделитель по вертикали */
+    align-self: center; 
 }
 
 .no-link {
-    text-decoration: none; /* Убирает подчеркивание */
-    color: inherit; /* Убирает синий цвет, наследует цвет родительского элемента */
+    text-decoration: none; 
+    color: inherit; 
 }

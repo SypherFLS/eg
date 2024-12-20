@@ -33,9 +33,9 @@ body {
 .top-pick {    
     max-width: 65px;    
     max-height: auto;    
-    border: 2px solid #000; /* Рамка для каждой картинки */
-    border-radius: 8px; /* Слегка округленная рамка */
-    padding: 5px; /* Отступ внутри рамки */
+    border: 2px solid #000; 
+    border-radius: 8px; 
+    padding: 5px; 
     background-image: linear-gradient( #5240c6c2, #863bbbb9);
 } 
 
@@ -48,8 +48,8 @@ body {
 }
 .container {
     display: flex;
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
-    gap: 20px; /* Отступы между рамками */
+    flex-wrap: wrap; 
+    gap: 20px; 
     
 }
 .box {
@@ -58,9 +58,9 @@ body {
     padding: 20px;
     min-height: 300px;
     background-image: linear-gradient(-30deg, #082079,#4a0472, #2f0346);
-    width: 200px; /* Ширина рамки */
+    width: 200px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative; /* Для позиционирования плюса */
+    position: relative; 
 }
 .add-box {
     display: flex;
@@ -69,14 +69,14 @@ body {
     font-size: 24px;
     color: #007BFF;
     cursor: pointer;
-    height: 100%; /* Занимает всю высоту рамки */
+    height: 100%; 
 }
 .new-box {
     border: 2px solid #007BFF;
     border-radius: 5px;
     padding: 20px;
     background-image: linear-gradient(-30deg, #082079,#4a0472, #2f0346);
-    width: 200px; /* Ширина новой рамки */
+    width: 200px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .header {
@@ -87,7 +87,7 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     background-image: linear-gradient(-30deg, #082079,#4a0472, #2f0346);
-    min-height: 240px; /* Минимальная высота текстового поля */
+    min-height: 240px; 
 }
 
 .calendar {
@@ -100,12 +100,12 @@ body {
     border: 2px solid black;
     border-radius: 30px;
     padding: 10px;
-    /* background-image: linear-gradient( #5240c6c2, #863bbbb9); */
-    width: 300px; /* Увеличенная ширина колонки */
-    height: 400px; /* Увеличенная высота колонки */
+    
+    width: 300px; 
+    height: 400px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* Прокрутка при переполнении */
-    position: relative; /* Для абсолютного позиционирования кнопки "+" */
+    overflow-y: auto; 
+    position: relative; 
 }
 .month-header {
     font-weight: bold;
@@ -131,54 +131,54 @@ body {
 .new-box {
     border: 2px solid black;
     border-radius: 10px;
-    padding: 10px; /* Уменьшенный отступ */
+    padding: 10px; 
     background-image: linear-gradient(-30deg, #082079,#4a0472, #2f0346);
-    margin-top: 10px; /* Отступ сверху */
+    margin-top: 10px; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование содержимого */
+    align-items: center; 
 }
 .header {
     font-weight: bold;
-    margin-bottom: 5px; /* Уменьшенный отступ */
-    width: calc(100% - 20px); /* Ширина заголовка */
+    margin-bottom: 5px; 
+    width: calc(100% - 20px); 
 }
 .text-field {
     border: 1px solid #ccc;
-    padding: 5px; /* Уменьшенный отступ */
+    padding: 5px; 
     background-image: linear-gradient(-30deg, #082079,#4a0472, #2f0346);
-    min-height: 50px; /* Минимальная высота текстового поля */
-    width: calc(100% - 20px); /* Ширина текстового поля */
-    resize: none; /* Запрет изменения размера текстового поля */
+    min-height: 50px; 
+    width: calc(100% - 20px); 
+    resize: none; 
 }
 .add-day-large {
     border: 2px solid #007BFF;
-    border-radius: 90px; /* Круглая рамка для кнопки "+" */
-    padding: 20px; /* Увеличенный отступ для большой кнопки */
-    margin-top: auto; /* Сдвигаем вниз при отсутствии заметок */
+    border-radius: 90px; 
+    padding: 20px; 
+    margin-top: auto; 
     text-align: center;
-    font-size: 32px; /* Увеличенный размер шрифта */
+    font-size: 32px; 
 }
 
 .footer {
-    display: flex; /* Используем flexbox для горизонтального расположения ссылок */
-    justify-content: center; /* Центрируем содержимое */
-    position: relative; /* Измените на fixed, если хотите, чтобы футер всегда был виден */
-    padding: 10px; /* Внутренние отступы для нижней плашки */
-    background-color: white; /* Цвет фона для футера */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень для футера */
+    display: flex; 
+    justify-content: center; 
+    position: relative; 
+    padding: 10px; 
+    background-color: white; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .footer-link {
-    color: #007bff; /* Цвет текста ссылки */
-    text-decoration: none; /* Убираем подчеркивание у ссылки */
-    margin: 0 10px; /* Отступы между ссылками */
+    color: #007bff; 
+    text-decoration: none; 
+    margin: 0 10px; 
 }
 
 .footer-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline; 
 }
 
 .separator {
-    align-self: center; /* Центрируем разделитель по вертикали */
+    align-self: center; 
 }

@@ -85,59 +85,55 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <a href="index.html" class="footer-link">Информация о нас</a>
-        <span class="separator">|</span>
-        <a href="index6.html" class="footer-link">Сообщить об ошибке</a>
-    </div>
+    
         
     <script>
         function addDay(element) {
-            // Создаем новую рамку для дня
+            
             const dayBox = document.createElement('div');
             dayBox.className = 'new-box';
     
-            // Заголовок
+            
             const header = document.createElement('input');
             header.className = 'header';
-            header.value = 'День'; // Значение по умолчанию
+            header.value = 'День'; 
             header.onchange = function() {
-                // Обновляем заголовок при изменении
-                this.value = this.value.trim() || 'День'; // Если пустое, возвращаем значение по умолчанию
+                
+                this.value = this.value.trim() || 'День'; 
             };
     
-            // Поле для текста
+            
             const textField = document.createElement('textarea');
             textField.className = 'text-field';
-            textField.placeholder = 'Введите текст здесь...'; // Подсказка
+            textField.placeholder = 'Введите текст здесь...'; 
     
-            // Добавляем заголовок и текстовое поле в новую рамку
+            
             dayBox.appendChild(header);
             dayBox.appendChild(textField);
     
-            // Вставляем новую рамку на место текущей
-            const monthColumn = element.parentElement; // Получаем колонку месяца
-            monthColumn.insertBefore(dayBox, element); // Вставляем новый день перед кнопкой
+            
+            const monthColumn = element.parentElement; 
+            monthColumn.insertBefore(dayBox, element); 
     
-            // Убираем текущий элемент (рамку с плюсом)
+            
             element.remove();
     
-            // Создаем новую рамку с плюсом
+            
             const newAddBox = document.createElement('div');
             
-            // Если у месяца есть заметки, добавляем обычную кнопку "+"
+            
             if (monthColumn.querySelectorAll('.new-box').length > 0) {
                 newAddBox.className = 'add-day';
                 newAddBox.setAttribute('onclick', 'addDay(this)');
                 newAddBox.textContent = '+';
             } else {
-                // Если заметок нет, добавляем большую кнопку "+"
+                
                 newAddBox.className = 'add-day add-day-large';
                 newAddBox.setAttribute('onclick', 'addDay(this)');
                 newAddBox.textContent = '+';
             }
     
-            // Добавляем новую рамку с плюсом в колонку
+            
             monthColumn.appendChild(newAddBox);
         }
     </script>

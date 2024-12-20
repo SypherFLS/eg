@@ -32,9 +32,9 @@ body {
 .top-pick {    
     max-width: 65px;    
     max-height: auto;    
-    border: 2px solid #000; /* Рамка для каждой картинки */
-    border-radius: 8px; /* Слегка округленная рамка */
-    padding: 5px; /* Отступ внутри рамки */
+    border: 2px solid #000; 
+    border-radius: 8px; 
+    padding: 5px; 
     background-image: linear-gradient( #5240c6c2, #863bbbb9);
 } 
 
@@ -62,37 +62,37 @@ body {
     border-radius: 8px;
     margin-bottom: 5px; 
     background-color: #ededed;
-    /* background-image: linear-gradient(30deg, #2E9AFF,#F498AD, #8e06d2); */
+    
 }  
 
 .frame {
     padding: 5px;
-    /* border: 2px solid black; */
+    
 }
 
 .section { 
     display: flex; 
-    width: 100%; /* Занимает всю ширину контейнера */ 
+    width: 100%; 
     text-decoration: none;
     background-image: linear-gradient( #5240c6c2, #863bbbb9);
 } 
 
 .pics-part { 
-    width: 50%; /* Ширина для фото */
+    width: 50%; 
     background-image: linear-gradient( #5240c6b5, #863bbbb2);
 }
 
 .photo { 
-    width: 100%; /* Полная ширина для изображения */
-    height: auto; /* Автоматическая высота */ 
+    width: 100%; 
+    height: auto; 
 } 
 
 .text-part { 
-    width: 50%; /* Ширина для текста */
-    padding: 10px; /* Отступы вокруг текста */ 
-    display: flex; /* Используем flex для центрирования текста */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
+    width: 50%; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     text-decoration: none;
 }
 
@@ -106,34 +106,34 @@ body {
 
 
 .no-link {
-    text-decoration: none; /* Убирает подчеркивание */
-    color: inherit; /* Убирает синий цвет, наследует цвет родительского элемента */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .no-link:hover {
-    text-decoration: none; /* Убирает подчеркивание при наведении */
-    color: inherit; /* Убирает изменение цвета при наведении */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 
 .footer {
-    display: flex; /* Используем flexbox для горизонтального расположения ссылок */
-    justify-content: center; /* Центрируем содержимое */ /* Отступ сверху для нижней плашки */
-    padding: 10px; /* Внутренние отступы для нижней плашки */
+    display: flex; 
+    justify-content: center;  
+    padding: 10px; 
 }
 
 .footer-link {
-    color: #007bff; /* Цвет текста ссылки */
-    text-decoration: none; /* Убираем подчеркивание у ссылки */
-    margin: 0 10px; /* Отступы между ссылками */
+    color: #007bff; 
+    text-decoration: none; 
+    margin: 0 10px; 
 }
 
 .footer-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline; 
 }
 
 .separator {
-    align-self: center; /* Центрируем разделитель по вертикали */
+    align-self: center; 
 }
 
 
@@ -143,12 +143,12 @@ body {
     border-radius: 10px;  
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
     padding: 20px;  
-    width: 90%; /* Занимает 90% ширины экрана */  
-    max-width: 600px; /* Максимальная ширина */  
+    width: 90%;   
+    max-width: 600px;   
 }  
 
 .note-title {  
-    width: calc(100% - 120px); /* Учитываем ширину для даты */  
+    width: calc(100% - 120px);   
     margin-bottom: 10px;  
     padding: 10px;  
     border: 1px solid #ccc;  
@@ -168,8 +168,8 @@ body {
 
 .note-text {  
     resize: none;
-    width: calc(100% - 20px); /* Увеличиваем ширину и ограничиваем отступ справа на 20px */  
-    height: 150px; /* Увеличиваем высоту текстового поля */  
+    width: calc(100% - 20px);   
+    height: 150px;   
     margin-bottom: 10px;  
     padding: 10px;  
     border: 1px solid #ccc;  
@@ -177,8 +177,8 @@ body {
 }  
 
 .save-button {  
-    display: block; /* Делаем кнопку блочным элементом для центрирования */  
-    margin: 0 auto; /* Центрируем кнопку */  
+    display: block;   
+    margin: 0 auto;   
     padding: 10px 15px;  
     background-color: #e10455;  
     color: white;  
@@ -189,7 +189,7 @@ body {
 }  
 
 .save-button:hover {  
-    background-color: #520bb6; /* Более темный цвет при наведении */  
+    background-color: #520bb6;   
 }  
 
 #timeDisplay {  
