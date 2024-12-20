@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Registration</title>
-    <link rel="stylesheet" href="styles/style2.css" type="text/css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Логин и Регистрация</title>
+    <link rel="stylesheet" href="styles/style2.css" type="text/css">
+    <style>
+        .error-message { color: red; display: none; }
+        .error {
+    border: 2px solid red; /* Подсветка красным */
+}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,41 +20,139 @@
             <div class="tab" id="register-tab">Регистрация</div>
         </div>
         <div class="form active" id="login-form">
-            <input type="text" placeholder="Логин" required>
-            <input type="password" placeholder="Пароль" required>
-            <a href="index2.html"><button>Войти</button></a>
+            <input type="text" id="login-username" placeholder="Логин" required>
+            <span class="error-message" id="login-username-error"></span>
+            <input type="password" id="login-password" placeholder="Пароль" required>
+            <span class="error-message" id="login-password-error"></span>
+            <button id="login-button"><span class="inner">Войти</span></button>
         </div>
         <div class="form" id="register-form">
-            <input type="text" placeholder="Логин" required>
-            <input type="email" placeholder="Почта" required>
-            <input type="password" placeholder="Пароль" required>
-            <input type="password" placeholder="Повторите пароль" required>
-            <label>
-                <input type="checkbox" required> Я принимаю пользовательское соглашение
+            <input type="text" id="register-username" placeholder="Логин" required>
+            <span class="error-message" id="register-username-error"></span>
+            <input type="email" id="register-email" placeholder="Почта" required>
+            <span class="error-message" id="register-email-error"></span>
+            <input type="password" id="register-password" placeholder="Пароль" required>
+            <span class="error-message" id="register-password-error"></span>
+            <input type="password" id="register-confirm-password" placeholder="Повторите пароль" required>
+            <span class="error-message" id="register-confirm-password-error"></span>
+            <label> 
+              <input type="checkbox" id="agreement-checkbox" required> Я принимаю <a class="no-link" href="index8.html">пользовательское соглашение</a> 
+              <div id="agreement-error" class="error-message"></div> 
             </label>
-            <a href="index2.html"><button>Зарегистрироваться</button></a>
+            <button id="register-button"><span class="inner">Зарегистрироваться</span></button>
         </div>
     </div>
 
     <script>
-        const loginTab = document.getElementById('login-tab');
-        const registerTab = document.getElementById('register-tab');
-        const loginForm = document.getElementById('login-form');
-        const registerForm = document.getElementById('register-form');
+      const loginTab = document.getElementById('login-tab');
+      const registerTab = document.getElementById('register-tab');
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      loginTab.addEventListener('click', () => {
+          loginTab.classList.add('active');
+          registerTab.classList.remove('active');
+          loginForm.classList.add('active');
+          registerForm.classList.remove('active');
+      });
+      registerTab.addEventListener('click', () => {
+          registerTab.classList.add('active');
+          loginTab.classList.remove('active');
+          registerForm.classList.add('active');
+          loginForm.classList.remove('active');
+      });
+      function clearErrors(form) {
+          const errorMessages = form.querySelectorAll('.error-message');
+          errorMessages.forEach(message => {
+              message.textContent = '';
+              message.style.display = 'none';
+          });
+      }
 
-        loginTab.addEventListener('click', () => {
-            loginTab.classList.add('active');
-            registerTab.classList.remove('active');
-            loginForm.classList.add('active');
-            registerForm.classList.remove('active');
-        });
+      document.getElementById('login-button').addEventListener('click', function() {
+          clearErrors(loginForm);
+          const username = document.getElementById('login-username').value.trim();
+          const password = document.getElementById('login-password').value;
+          let hasError = false;
+  
+          if (username === '') {
+              document.getElementById('login-username-error').textContent = "Введите логин.";
+              document.getElementById('login-username-error').style.display = 'block';
+              hasError = true;
+          }
+  
+          if (password === '') {
+              document.getElementById('login-password-error').textContent = "Введите пароль.";
+              document.getElementById('login-password-error').style.display = 'block';
+              hasError = true;
+          }
+          if (!hasError) {
+              window.location.href = 'index2.html';
+          }
+      });
+      document.getElementById('register-button').addEventListener('click', function() {
+        clearErrors(registerForm);
+        const username = document.getElementById('register-username').value.trim();
+        const email = document.getElementById('register-email').value.trim();
+        const password = document.getElementById('register-password').value;
+        const confirmPassword = document.getElementById('register-confirm-password').value;
+        const agreementCheckbox = document.getElementById('agreement-checkbox'); // Получаем чекбокс
+        let hasError = false;
 
-        registerTab.addEventListener('click', () => {
-            registerTab.classList.add('active');
-            loginTab.classList.remove('active');
-            registerForm.classList.add('active');
-            loginForm.classList.remove('active');
-        });
-    </script>
+        // Проверка логина
+        if (username === '') {
+            document.getElementById('register-username-error').textContent = "Введите логин.";
+            document.getElementById('register-username-error').style.display = 'block';
+            hasError = true;
+        }
+
+        // Проверка email
+        if (email === '') {
+            document.getElementById('register-email-error').textContent = "Введите почту.";
+            document.getElementById('register-email-error').style.display = 'block';
+            hasError = true;
+        } else {
+            const emailPattern = /^[^s@]+@[^s@]+.[^s@]+$/; // Исправленный паттерн для проверки email
+            if (!emailPattern.test(email)) {
+                document.getElementById('register-email-error').textContent = "Некорректный адрес электронной почты.";
+                document.getElementById('register-email-error').style.display = 'block';
+                hasError = true;
+            }
+        }
+
+        // Проверка пароля
+        if (password === '') {
+            document.getElementById('register-password-error').textContent = "Введите пароль.";
+            document.getElementById('register-password-error').style.display = 'block';
+            hasError = true;
+        }
+
+        // Проверка подтверждения пароля
+        if (confirmPassword === '') {
+            document.getElementById('register-confirm-password-error').textContent = "Повторите пароль.";
+            document.getElementById('register-confirm-password-error').style.display = 'block';
+            hasError = true;
+        } else if (password !== confirmPassword) {
+            document.getElementById('register-confirm-password-error').textContent = "Пароли не совпадают.";
+            document.getElementById('register-confirm-password-error').style.display = 'block';
+            hasError = true;
+        }
+
+        // Проверка согласия с пользовательским соглашением
+        if (!agreementCheckbox.checked) {
+            document.getElementById('agreement-error').textContent = "Вы должны принять пользовательское соглашение.";
+            document.getElementById('agreement-error').style.display = 'block';
+            hasError = true;
+        } else {
+            document.getElementById('agreement-error').textContent = ""; // Очищаем сообщение об ошибке
+        }
+
+        // Если нет ошибок, переходим на другую страницу
+        if (!hasError) {
+            setTimeout(() => { window.location.href = 'index2.html'; }, 500); // Переход через 500 мс
+        }
+    });
+
+</script>
+
 </body>
 </html>

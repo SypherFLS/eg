@@ -1,0 +1,72 @@
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <meta charset="utf-8">   
+    <title>Создать запись</title>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="styles/style1.css" type="text/css">   
+</head>   
+<body>  
+    <div class="top-bar">  
+        <div class="top-bar-left">  
+            <div class="borders-r">  
+                <a href="index2.html"><img src="pics/menu.png" alt="Главная" class="top-pick"></a>
+            </div>  
+            <div class="borders-r">  
+                <a href="index5.html"><img src="pics/book.png" alt="Ежедневник" class="top-pick"></a> 
+            </div>  
+            <div class="borders-r">  
+                <a href="index.html"><img src="pics/cloud.png" alt="Погода" class="top-pick"></a>  
+            </div>  
+            <div class="borders-r">  
+                <a href="index7.html"><img src="pics/graph.png" alt="Графики" class="top-pick"></a>  
+            </div>  
+        </div>  
+        <div class="top-bar-right">  
+            <div class="borders-l">  
+                <a href="index3.html"></a><img src="pics/settings.png" alt="Настройки" class="top-pick">  
+            </div>  
+            <div class="borders-l">  
+                <a href="index3.html"><img src="pics/user.png" alt="Аккаунт" class="top-pick"> </a> 
+            </div>  
+        </div>  
+    </div>  
+    <div class="main">
+        <div class="note-container">
+            <div style="display: flex; align-items: center;">
+                <input type="text" class="note-title" id="noteTitle" placeholder="Название заметки">
+                <span class="date-display" id="currentDate"></span>
+            </div>
+            <textarea class="note-text" id="noteText" placeholder="Введите текст заметки..."></textarea>
+            <button class="save-button" id="saveButton"><a href="index5.html" class="no-link">Сохранить</a></button>
+            <div id="timeDisplay"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="index.html" class="footer-link">Информация о нас</a>
+        <span class="separator">|</span>
+        <a href="index6.html" class="footer-link">Сообщить об ошибке</a>
+    </div>
+    <script>
+        function getCurrentDate() {
+            const date = new Date();
+            return date.toLocaleDateString('ru-RU', { year: 'numeric', month: '2-digit', day: '2-digit' });
+        }
+    
+        // Устанавливаем текущую дату в элемент
+        document.getElementById('currentDate').innerText = getCurrentDate();
+    
+        // document.getElementById('saveButton').addEventListener('click', () => {
+        //     const title = document.getElementById('noteTitle').value;
+        //     const text = document.getElementById('noteText').value;
+    
+        //     if (title && text) {
+        //         alert(Заметка сохранена!\n Название: ${title}\nТекст: ${text});
+        //         // Здесь можно добавить код для сохранения заметки на сервер или в локальное хранилище
+        //     } else {
+        //         alert('Пожалуйста, заполните все поля.');
+        //     }
+        // });
+    
+    </script>
+</body>

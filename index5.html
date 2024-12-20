@@ -1,0 +1,151 @@
+<!DOCTYPE html>   
+<html>   
+<head>   
+    <meta charset="utf-8">   
+    <title>Ежедневник</title>   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="styles/style3.css" type="text/css">   
+</head>   
+<body>  
+    <div class="top-bar">  
+        <div class="top-bar-left">  
+            <div class="borders-r">  
+                <a href="index2.html"><img src="pics/menu.png" alt="Главная" class="top-pick"></a>
+            </div>  
+            <div class="borders-r">  
+                <a href="index5.html"><img src="pics/book.png" alt="Ежедневник" class="top-pick"></a> 
+            </div>  
+            <div class="borders-r">  
+                <a href="index3.html"><img src="pics/cloud.png" alt="Погода" class="top-pick"></a>  
+            </div>  
+            <div class="borders-r">  
+                <a href="index3.html"><img src="pics/graph.png" alt="Графики" class="top-pick"></a>  
+            </div>  
+        </div>  
+        <div class="top-bar-right">  
+            <div class="borders-l">  
+                <a href="index3.html"></a><img src="pics/settings.png" alt="Настройки" class="top-pick">  
+            </div>  
+            <div class="borders-l">  
+                <a href="index3.html"><img src="pics/user.png" alt="Аккаунт" class="top-pick"> </a> 
+            </div>  
+        </div>  
+    </div>  
+    <div class="asd">
+        <div class="calendar" id="calendar">
+            <div class="calendar" id="calendar">
+                <div class="month-column">
+                    <div class="month-header">Январь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Февраль</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Март</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Апрель</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Май</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Июнь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Июль</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Август</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Сентябрь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Октябрь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Ноябрь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+                <div class="month-column">
+                    <div class="month-header">Декабрь</div>
+                    <div class="add-day add-day-large" onclick="addDay(this)">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="index.html" class="footer-link">Информация о нас</a>
+        <span class="separator">|</span>
+        <a href="index6.html" class="footer-link">Сообщить об ошибке</a>
+    </div>
+        
+    <script>
+        function addDay(element) {
+            // Создаем новую рамку для дня
+            const dayBox = document.createElement('div');
+            dayBox.className = 'new-box';
+    
+            // Заголовок
+            const header = document.createElement('input');
+            header.className = 'header';
+            header.value = 'День'; // Значение по умолчанию
+            header.onchange = function() {
+                // Обновляем заголовок при изменении
+                this.value = this.value.trim() || 'День'; // Если пустое, возвращаем значение по умолчанию
+            };
+    
+            // Поле для текста
+            const textField = document.createElement('textarea');
+            textField.className = 'text-field';
+            textField.placeholder = 'Введите текст здесь...'; // Подсказка
+    
+            // Добавляем заголовок и текстовое поле в новую рамку
+            dayBox.appendChild(header);
+            dayBox.appendChild(textField);
+    
+            // Вставляем новую рамку на место текущей
+            const monthColumn = element.parentElement; // Получаем колонку месяца
+            monthColumn.insertBefore(dayBox, element); // Вставляем новый день перед кнопкой
+    
+            // Убираем текущий элемент (рамку с плюсом)
+            element.remove();
+    
+            // Создаем новую рамку с плюсом
+            const newAddBox = document.createElement('div');
+            
+            // Если у месяца есть заметки, добавляем обычную кнопку "+"
+            if (monthColumn.querySelectorAll('.new-box').length > 0) {
+                newAddBox.className = 'add-day';
+                newAddBox.setAttribute('onclick', 'addDay(this)');
+                newAddBox.textContent = '+';
+            } else {
+                // Если заметок нет, добавляем большую кнопку "+"
+                newAddBox.className = 'add-day add-day-large';
+                newAddBox.setAttribute('onclick', 'addDay(this)');
+                newAddBox.textContent = '+';
+            }
+    
+            // Добавляем новую рамку с плюсом в колонку
+            monthColumn.appendChild(newAddBox);
+        }
+    </script>
+
+</body>
+</html>
+
+    
+
+</body>
+</html>

@@ -57,3 +57,21 @@ body {
 .form button:hover {
     background-color: #0056b3;
 }
+
+
+
+
+.no-link {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Убирает синий цвет, наследует цвет родительского элемента */
+}
+
+.no-link:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+    color: inherit; /* Убирает изменение цвета при наведении */
+}
+
+.error {
+    background-color: red; /* Красный фон */
+    color: white; /* Белый текст */
+}

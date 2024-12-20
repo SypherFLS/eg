@@ -7,6 +7,7 @@ body {
 }    
 
 
+
 .top-bar {    
     border: 2px solid #000;     
     display: flex;     
@@ -34,7 +35,7 @@ body {
     border: 2px solid #000; /* Рамка для каждой картинки */
     border-radius: 8px; /* Слегка округленная рамка */
     padding: 5px; /* Отступ внутри рамки */
-    background-color: #e5e5e5; /* Цвет фона внутри рамки (можно изменить) */
+    background-image: linear-gradient( #5240c6c2, #863bbbb9);
 } 
 
 .main {  
@@ -73,11 +74,12 @@ body {
     display: flex; 
     width: 100%; /* Занимает всю ширину контейнера */ 
     text-decoration: none;
+    background-image: linear-gradient( #5240c6c2, #863bbbb9);
 } 
 
 .pics-part { 
     width: 50%; /* Ширина для фото */
-    background-color: #e5e5e5;
+    background-image: linear-gradient( #5240c6b5, #863bbbb2);
 }
 
 .photo { 
@@ -133,3 +135,65 @@ body {
 .separator {
     align-self: center; /* Центрируем разделитель по вертикали */
 }
+
+
+.note-container {  
+    background-color: white;  
+    border: 1px solid #ccc;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    padding: 20px;  
+    width: 90%; /* Занимает 90% ширины экрана */  
+    max-width: 600px; /* Максимальная ширина */  
+}  
+
+.note-title {  
+    width: calc(100% - 120px); /* Учитываем ширину для даты */  
+    margin-bottom: 10px;  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+.date-display {  
+    display: inline-block;  
+    vertical-align: top;  
+    margin: 10px;  
+    padding-left: 3%;  
+    padding-right: 3%;  
+    padding-bottom: 2%;  
+    font-size: 14px;  
+    color: #666;  
+}  
+
+.note-text {  
+    resize: none;
+    width: calc(100% - 20px); /* Увеличиваем ширину и ограничиваем отступ справа на 20px */  
+    height: 150px; /* Увеличиваем высоту текстового поля */  
+    margin-bottom: 10px;  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+.save-button {  
+    display: block; /* Делаем кнопку блочным элементом для центрирования */  
+    margin: 0 auto; /* Центрируем кнопку */  
+    padding: 10px 15px;  
+    background-color: #e10455;  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+
+.save-button:hover {  
+    background-color: #520bb6; /* Более темный цвет при наведении */  
+}  
+
+#timeDisplay {  
+    margin-top: 10px;  
+    font-size: 14px;  
+    color: #666;  
+} 
